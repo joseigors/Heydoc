@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Paciente - Hey Doc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <img src="assets/arte-logo.jpg" alt="Hey doc" class="navbar-header__logo">
+                <button type="button" class="navbar-header__toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="navbar-list">
+                <li>
+                    <a href="index.html" class="navbar-list__link">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre" class="navbar-list__link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#diferenciais" class="navbar-list__link">Diferenciais</a>
+                </li>
+                <li>
+                    <a href="#services" class="navbar-list__link">Serviços</a>
+                </li>
+                <li>
+                    <a href="#Contatos" class="navbar-list__link">Contatos</a>
+                </li>
+            </ul>
+            <ul class="navbar-icons">
+                <li>
+                    <a href="https://www.facebook.com" target="_blank" class="navbar-icons__icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank" class="navbar-icons__icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cadastro">
+        <h2 class="section__titulo">Cadastro de Paciente</h2>
+        <form class="cadastro-form">
+            <div class="cadastro-form__group">
+                <label for="nome" class="cadastro-form__label">Nome</label>
+                <input type="text" id="nome" name="nome" class="cadastro-form__input" required>
+            </div>
+            <div class="cadastro-form__group">
+                <label for="email" class="cadastro-form__label">Email</label>
+                <input type="email" id="email" name="email" class="cadastro-form__input" required>
+            </div>
+            <div class="cadastro-form__group">
+                <label for="telefone" class="cadastro-form__label">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" class="cadastro-form__input" required>
+            </div>
+            <div class="cadastro-form__group">
+                <label for="data-nascimento" class="cadastro-form__label">Data de Nascimento</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" class="cadastro-form__input" required>
+            </div>
+            <div class="cadastro-form__group">
+                <label for="endereco" class="cadastro-form__label">Endereço</label>
+                <input type="text" id="endereco" name="endereco" class="cadastro-form__input" required>
+            </div>
+            <button class="cadastro-form__button" onclick="redirect()">Cadastrar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__social">
+                <a href="https://www.facebook.com" target="_blank" class="footer__social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="footer__social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="footer__copy">&copy; 2023 Hey Doc. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        function redirect() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

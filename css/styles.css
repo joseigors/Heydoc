@@ -1,0 +1,915 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* HOMEPAGE
+/* 0. Variáveis
+/* 1. Estilos Gerais
+/* 2. Navbar
+/* 3. Hero
+/* 4. Sobre Nós
+/* 5. Diferenciais
+/* 6. Serviços
+/* 7. Contatos
+/* 8. Footer
+/* 9. Login
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+	--ff-primary: "Cairo", sans-serif;
+
+	--clr-background: #F5F5F5;
+	--clr-white: #F1FCDE;
+	--clr-black: #090E01;
+	--clr-light-green: #DEF8AF;
+	--clr-medium-green: #88CC11;
+	--clr-dark-green: #456809;
+
+	--spacing: 0.25rem;
+	--transition: all 0.2s linear;
+	--dark-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+/**********************************/
+/* 1. Estilos Gerais
+/**********************************/
+html {
+	font-size: 62.5%;
+
+}
+
+body {
+	font-family: var(--ff-primary);
+	background: var(--clr-background);
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 1.6rem;
+	line-height: 1.8rem;
+}
+
+section {
+	min-width: 30rem;
+	padding: 1.6rem;
+}
+
+section:nth-child(odd) {
+	background: var(--clr-light-green);
+}
+
+.section__titulo {
+	font-size: 4.8rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding-top: 1.6rem;
+	padding-bottom: 1.6rem;
+	text-align: center;
+}
+
+.section__titulo--destaque {
+	color: var(--clr-medium-green);
+}
+
+@media screen and (min-width: 1170px) {
+	section {
+		padding: 1.6rem calc((100% - 117rem - 1.6rem)/2);
+	}
+}
+
+@media screen and (min-width: 625px) {
+	section:nth-child(odd) {
+		padding-top: 5.6rem;
+		padding-bottom: 5.6rem;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+.navbar {
+	position: fixed;
+	background: white;
+	width: 100%;
+	padding: 1.6rem;
+	box-shadow: var(--dark-shadow);
+	z-index: 3;
+}
+
+
+
+.navbar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+}
+
+.navbar-header__toggle {
+	background: transparent;
+	border: transparent;
+	font-size: 3.2rem;
+	color: var(--clr-medium-green);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.navbar-header__toggle:hover {
+	transform: scale(1.2);
+}
+
+.navbar-list {
+	height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+	justify-content: space-between;
+}
+
+.navbar-list--show-links {
+	height: 25rem;
+
+}
+
+.navbar-list__link {
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 900;
+	padding: 1.6rem;
+	text-transform: capitalize;
+	color: var(--clr-black);
+	transition: var(--transition);
+}
+
+.navbar-list__link:hover {
+	background: var(--clr-medium-green);
+	padding-left: 3.6rem;
+}
+
+.navbar-icons {
+	display: none;
+}
+
+
+
+@media screen and (min-width: 900px) {
+	.navbar-header__toggle {
+		display: none;
+	}
+
+	.navbar-list {
+		height: auto;
+		display: flex;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: .8rem 1.6rem;
+	}
+
+	.navbar-list__link:hover {
+		background: none;
+		padding-left: 1.6rem;
+		color: var(--clr-medium-green);
+	}
+
+	.navbar-icons {
+		display: flex;
+	}
+
+	.navbar-icons__icon {
+		margin-right: 1.6rem;
+		color: var(--clr-black);
+		font-size: 1.8rem;
+		font-weight: 900;
+		transition: var(--transition);
+	}
+
+	.navbar-header__logo:hover {
+		color: var(--clr-medium-green);
+	}
+
+}
+
+@media screen and (min-width: 1084px) {
+	.navbar {
+		padding: 1.6rem calc((100% - 108rem - 1.6rem) /2);
+	}
+}
+
+/**********************************/
+/* 3. Hero
+/**********************************/
+
+.hero {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.hero__video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.hero-text {
+	min-width: 37rem;
+	padding: 1.6rem;
+}
+
+.hero-text__titulo {
+	font-size: 5.2rem;
+	font-weight: 900;
+	color: var(--clr-medium-green);
+	text-transform: uppercase;
+}
+
+.hero-text__descricao {
+	font-size: 2.4rem;
+	font-weight: 600;
+	color: var(--clr-black);
+	max-width: 57rem;
+	margin: 1rem 0;
+}
+
+.hero-text__cta {
+	display: block;
+	font-size: 3.0rem;
+	font-weight: 600;
+	color: var(--clr-background);
+	width: 27rem;
+	text-align: center;
+	background: var(--clr-medium-green);
+	padding: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	transition: var(--transition);
+}
+
+.hero-text__cta:hover {
+	letter-spacing: .4rem;
+}
+
+@media screen and (min-width: 960px) {
+	.hero-text__titulo {
+		font-size: 7.2rem;
+
+	}
+
+	.hero-text__titulo--linha-2 {
+		font-size: 6.4rem;
+	}
+}
+
+@media screen and (min-width: 1084px) {
+	.hero-text {
+		padding: 1.6rem calc((100% - 108rem - 1.6rem) /2);
+	}
+}
+
+/**********************************/
+/* 4. Sobre Nós
+/**********************************/
+
+.sobre-texto {
+	margin-top: 1.6rem;
+}
+
+.sobre-texto__titulo {
+	font-size: 2.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: .8rem;
+}
+
+@media screen and (min-width:768px) {
+	.sobre-c {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.sobre-texto {
+		flex: 6 1 1rem;
+		margin-left: 1.5rem;
+	}
+
+	.sobre-c__img {
+		flex: 1 1 1rem;
+		margin-right: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.sobre {
+		height: 100vh;
+	}
+}
+
+/**********************************/
+/* 5. Diferenciais
+/**********************************/
+
+.diferenciais {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1.6rem;
+}
+
+.diferencial+.diferencial {
+	margin-top: 1.6rem;
+
+}
+
+.diferencial__titulo {
+	font-size: 2.4rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	margin-bottom: .8rem;
+}
+
+.diferencial__descricao {
+	width: 28.8rem;
+	max-width: 57rem;
+	margin: 1rem 0;
+}
+
+.diferencial__titulo::before {
+
+	background: var(--clr-black);
+	color: var(--clr-background);
+	margin-right: .8rem;
+	font-family: "Font Awesome 5 free";
+	font-weight: 900;
+	font-size: 3.6rem;
+}
+
+.diferencial__titulo--video::before {
+	content: "\f03d";
+}
+
+.diferencial__titulo--tela::before {
+	content: "\f10a ";
+}
+
+.diferencial__titulo--agenda::before {
+	content: "\f073 ";
+}
+
+@media screen and (min-width: 946px) {
+	.diferenciais {
+		justify-content: space-between;
+	}
+
+	.diferencial+.diferencial {
+		margin-top: 0;
+
+	}
+}
+
+
+
+/**********************************/
+/* 6. Serviços
+/**********************************/
+
+.serviços {
+	display: flex;
+	overflow-x: auto;
+}
+
+.serviço {
+	flex-shrink: 0;
+	background: var(--clr-light-green);
+	max-width: 37rem;
+	box-shadow: var(--dark-shadow);
+}
+
+.serviço+.serviço {
+	margin-left: 3rem;
+}
+
+.serviço__info {
+	padding: 1.6rem;
+}
+
+.info-header {
+	display: flex;
+	align-items: center;
+}
+
+.info-header__titulo {
+	font-size: 2.4rem;
+	font-weight: 600;
+	padding: 1.6rem;
+}
+
+.info-text__cta {
+	padding: 1.6rem;
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: var(--clr-background);
+	width: 14rem;
+	text-align: center;
+	background: var(--clr-medium-green);
+	padding: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	transition: var(--transition);
+}
+
+.info-text__cta:hover {
+	letter-spacing: .4rem;
+}
+
+/**********************************/
+/* 7. Contato
+/**********************************/
+.contato-texto {
+	padding: 1.6rem;
+	font-size: 2.4rem;
+	font-weight: 600;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+
+}
+
+/**********************************/
+/* 8. Footer
+/**********************************/
+
+.footer {
+	background: var(--clr-medium-green);
+	font-size: 1.2rem;
+	font-weight: 900;
+	text-align: center;
+	text-transform: capitalize;
+	padding: 7.2rem 0;
+}
+
+.footer-list,
+.footer-icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.footer-list__link {
+	color: var(--clr-background);
+	padding: 1.6rem;
+	transition: var(--transition);
+}
+
+.footer-list__link:hover {
+	color: var(--clr-black)
+}
+
+.footer-icons {
+	margin: 3.2rem 0;
+}
+
+.footer-icons__icon {
+	margin-right: 1.6rem;
+	color: var(--clr-black);
+	font-size: 2.2rem;
+	transition: var(--transition);
+}
+
+.footer-icons__icon:hover {
+	color: var(--clr-background);
+}
+
+.date::after {
+	content: "\a";
+	white-space: pre;
+}
+
+.copyright {
+	color: var(--clr-background);
+}
+
+@media screen and (min-width: 535px) {
+	.footer {
+		font-size: 1.6rem;
+	}
+
+	.date::after {
+		content: "";
+	}
+}
+
+/**********************************/
+/* 9. Login
+/**********************************/
+
+
+.wrapper {
+	position: fixed;
+	background: #DEF8AF;
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 1.6rem;
+	box-shadow: var(--dark-shadow);
+	min-height: 100vh;
+}
+
+
+
+.form-box__titulo {
+	padding: 1.6rem;
+	font-size: 7rem;
+	color: var(--clr-black);
+	text-align: center;
+}
+
+.input-box {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #000000;
+	margin: 30px 0;
+}
+
+.input-box label {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	font-size: 2rem;
+	color: #000000;
+	font-weight: 500;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+	top: -5px;
+}
+
+.input-box input {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	color: #000000;
+	font-weight: 600;
+	padding: 0 35px 0 5px;
+}
+
+
+.remember-forgot {
+	font-size: 1.2rem;
+	color: #000000;
+	font-weight: 500;
+	margin: -15px 0 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.remember-forgot label input {
+	accent-color: #000000;
+	margin-right: 3px;
+}
+
+.remember-forgot a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.remember-forgot a:hover {
+	text-decoration: underline;
+}
+
+.btn {
+	width: 100%;
+	height: 45px;
+	background: var(--clr-medium-green);
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 2rem;
+	color: #fff;
+	font-weight: 500;
+}
+
+.login-register {
+	font-size: 1.6rem;
+	color: #000000;
+	text-align: center;
+	font-weight: 500;
+	margin: 25px 0 10px;
+}
+
+.login-register p a {
+	color: var(--clr-dark-green);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.login-register p a:hover {
+	text-decoration: underline;
+}
+
+/**********************************/
+/* 10. CadPaciente
+/**********************************/
+
+
+.section__titulo {
+	text-align: center;
+	font-size: 28px;
+	color: #000;
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+/* Estilos do formulário de cadastro */
+.cadastro-form__group {
+	margin-bottom: 20px;
+}
+
+.cadastro-form__label {
+	display: block;
+	font-weight: bold;
+}
+
+.cadastro-form__input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.cadastro-form__button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: var(--clr-medium-green);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 40px;
+}
+
+.cadastro-form__button:hover {
+	background-color: var(--clr-dark-green);
+}
+
+/* Estilos do header */
+
+
+.navbar-header__logo {
+	max-width: 150px;
+}
+
+.navbar-list {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-list__link {
+	color: var(--clr-medium-green);
+	text-decoration: none;
+	padding: 10px;
+}
+
+.navbar-list__link:hover {
+	text-decoration: underline;
+}
+
+.navbar-icons {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-icons__icon {
+	color: var(--clr-dark-green);
+	text-decoration: none;
+	padding: 10px;
+}
+
+/* Estilos do footer */
+.footer {
+	background-color: var(--clr-medium-green);
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+}
+
+.footer__copy {
+	margin-top: 10px;
+}
+
+.footer__social {
+	margin-top: 20px;
+}
+
+.footer__social-icon {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 767px) {
+	.container {
+		padding: 10px;
+	}
+
+	.section__titulo {
+		font-size: 24px;
+	}
+}
+
+
+
+/**********************************/
+/* 11. Agendar Consulta
+/**********************************/
+
+.consulta-form__group {
+	margin-bottom: 20px;
+
+}
+
+.consulta-form__label {
+	display: block;
+
+	margin-bottom: 5px;
+
+}
+
+.consulta-form__input,
+.consulta-form__select {
+	width: 100%;
+
+	padding: 10px;
+
+	border: 1px solid #ccc;
+
+	border-radius: 4px;
+
+}
+
+.consulta-form__button {
+	background-color: var(--clr-medium-green);
+
+	color: white;
+
+	padding: 10px 20px;
+
+	border: none;
+
+	border-radius: 4px;
+
+	cursor: pointer;
+
+}
+
+/**********************************/
+/* 12. CadPaciente
+/**********************************/
+
+/* Estilos gerais */
+
+
+.wrapper {
+	position: fixed;
+	background: #DEF8AF;
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 1.6rem;
+	box-shadow: var(--dark-shadow);
+	min-height: 100vh;
+}
+
+/* Estilos do cabeçalho */
+
+.navbar-icons__icon {
+	color: var(--clr-dark-green);
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+/* Estilos do formulário */
+.form-box {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	margin-top: 50px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box__title {
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-box__group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.form-box__icon {
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+	color: #999;
+}
+
+.form-box__input,
+.form-box__textarea {
+	width: 100%;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.form-box__label {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 16px;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+
+.form-box__input:focus,
+.form-box__textarea:focus {
+	outline: none;
+	border-color: #0099ff;
+}
+
+.form-box__input:focus+.form-box__label,
+.form-box__textarea:focus+.form-box__label,
+.form-box__input:not(:placeholder-shown)+.form-box__label,
+.form-box__textarea:not(:placeholder-shown)+.form-box__label {
+	top: 10px;
+	font-size: 12px;
+	color: #0099ff;
+}
+
+.form-box__button {
+	display: block;
+	width: 100%;
+	padding: 15px;
+	border: none;
+	background-color: var(--clr-medium-green);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.form-box__button:hover {
+	background-color: var(--clr-dark-green);
+}

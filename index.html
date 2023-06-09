@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hey Doc</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+		integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		referrerpolicy="no-referrer" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<header id="home">
+		<nav class="navbar">
+			<div class="navbar-header">
+				<img src="assets/arte-logo.jpg" alt="Hey doc" class="navbar-header__logo">
+				<button type="button" class="navbar-header__toggle">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div> <!-- navbar-header -->
+			<ul class="navbar-list">
+				<li>
+					<a href="#home" class="navbar-list__link">Home</a>
+				</li>
+				<li>
+					<a href="#sobre" class="navbar-list__link">Sobre nós</a>
+				</li>
+				<li>
+					<a href="#diferenciais" class="navbar-list__link">Diferenciais</a>
+				</li>
+				<li>
+					<a href="#services" class="navbar-list__link">Serviços</a>
+				</li>
+				<li>
+					<a href="#Contatos" class="navbar-list__link">Contatos</a>
+				</li>
+			</ul> <!-- navbar-list -->
+			<ul class="navbar-icons">
+				<li>
+					<a href="https://www.facebook.com" target="_blank" class="navbar-icons__icon">
+						<i class="fab fa-facebook"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com" target="_blank" class="navbar-icons__icon">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</li>
+			</ul> <!-- navbar-icons -->
+		</nav> <!-- navbar -->
+
+		<div class="hero">
+			<video src="assets/HeyDoc.mp4" autoplay muted loop class="hero__video"></video>
+			<div class="hero-text">
+				<h1 class="hero-text__titulo">Conheça a HeyDoc! <br> <span class="hero-text__titulo--linha-2"> A mais
+						nova plataforma
+						<br>especializada na sua saúde</span></h1>
+				<p class="hero-text__descricao">Venha conhecer uma nova maneira
+					de cuidar da sua saúde e bem estar!</p>
+				<a href="cadPaciente.html" class="hero-text__cta">Faça parte!</a>
+			</div> <!-- hero-text -->
+		</div> <!-- hero -->
+	</header> <!-- home -->
+
+	<section id="sobre" class="sobre">
+		<h2 class="section__titulo">Sobre <span class="section__titulo--destaque"> Nós</span> </h2>
+		<div class="sobre-c">
+			<img src="assets/HeyDocPhoto.jpg" alt="Sobre nós" class="sobre-c__img">
+			<div class="sobre-texto">
+				<h3 class="sobre-texto__titulo">Uma nova maneira de cuidar da sua saúde</h3>
+				<p>Bem-vindo ao Hey Doc!
+					Nós somos uma plataforma de consultas médicas a distância,
+					criada para ajudar você a cuidar da sua saúde de maneira fácil e acessível.
+					Com o Hey Doc, você pode consultar médicos altamente qualificados sem sair de casa,
+					através de um dispositivo móvel, tablet ou computador.</p>
+				<br>
+				<p>Acreditamos que o acesso à assistência médica deve ser um direito básico,
+					e estamos comprometidos em fornecer atendimento de qualidade e acessível a todos.
+					Obrigado por escolher Hey Doc para suas necessidades de assistência médica</p>
+			</div>
+		</div> <!-- sobre-c -->
+	</section> <!-- sobre nos -->
+
+	<section id="diferenciais">
+		<h2 class="section__titulo">Nossos <span class="section__titulo--destaque">Diferencias</span></h2>
+		<div class="diferenciais">
+			<article class="diferencial">
+				<h3 class="diferencial__titulo diferencial__titulo--video">Integração com plataformas <br>de
+					telemedicina
+				</h3>
+				<p class="diferencial__descricao">Aqui na HeyDoc, você poderá realizar suas consultas online
+					com facilidade e segurança, sem a necessidade de sair de casa.</p>
+			</article>
+			<article class="diferencial">
+				<h3 class="diferencial__titulo diferencial__titulo--tela">Prontuário Eletrônico</h3>
+				<p class="diferencial__descricao">Armazenamento de todas as suas informações,
+					como histórico de consultas, exames realizados, medicações prescritas, garantindo um
+					excelente serviço para e comodidade para pacientes e profissionais da saúde.</p>
+			</article>
+
+			<article class="diferencial">
+				<h3 class="diferencial__titulo diferencial__titulo--agenda">Agenda Online</h3>
+				<p class="diferencial__descricao">Fila de espera? Nunca mais! Com HeyDoc os pacientes
+					podem marcar suas consultas de forma simples e rápida,
+					escolhendo horários e datas disponíveis,
+					sem precisar fazer contato telefônico com a clínica</p>
+			</article>
+		</div> <!-- diferenciais -->
+	</section>
+
+	<section id="services">
+		<h2 class="section__titulo">Nossos <span class="section__titulo--destaque">Serviços</span></h2>
+		<div class="serviços">
+			<article class="serviço">
+				<img src="assets/telemedicina.jpg" alt="Consultas" class="serviço__thumb">
+				<div class="serviço__info">
+					<div class="info-header">
+						<h3 class="info-header__titulo">Consultas</h3>
+					</div> <!-- info-header -->
+					<a href="consulta.html" class="info-text__cta">Agende agora!</a>
+				</div><!-- serviço__info -->
+			</article>
+			<article class="serviço">
+				<img src="assets/exames.jpg" alt="Exames" class="serviço__thumb">
+				<div class="serviço__info">
+					<div class="info-header">
+						<h3 class="info-header__titulo">Exames</h3>
+					</div> <!-- info-header -->
+					<a href="exames.html" class="info-text__cta">Agende agora!</a>
+				</div><!-- serviço__info -->
+			</article>
+			<article class="serviço">
+				<img src="assets/resultado.jpg" alt="Resultados" class="serviço__thumb">
+				<div class="serviço__info">
+					<div class="info-header">
+						<h3 class="info-header__titulo">Resultados</h3>
+					</div> <!-- info-header -->
+					<a href="resultados.html" class="info-text__cta">Consulte seus exames!</a>
+				</div><!-- serviço__info -->
+			</article>
+		</div> <!-- serviços -->
+	</section>
+	<section id="Contatos">
+		<h2 class="section__titulo">Ficou na <span class="section__titulo--destaque">dúvida</span></h2>
+		<h3 class="contato-texto"> Entre em contato pelo número (xx)xxxxx-xxxx
+			<br>ou pelo email heydoc@email.com
+		</h3>
+	</section>
+	<footer class="footer">
+		<ul class="footer-list">
+			<li class="footer-list__item">
+				<a href="#home" class="footer-list__link">Home</a>
+			</li>
+			<li class="footer-list__item">
+				<a href="#sobre" class="footer-list__link">Sobre Nós</a>
+			</li>
+			<li class="footer-list__item">
+				<a href="#diferenciais" class="footer-list__link">Diferenciais</a>
+			</li>
+			<li class="footer-list__item">
+				<a href="#services" class="footer-list__link">Serviços</a>
+			</li>
+			<li class="footer-list__item">
+				<a href="#Contatos" class="footer-list__link">Contatos</a>
+
+			</li>
+		</ul> <!-- footerlist -->
+
+		<ul class="footer-icons">
+			<li>
+				<a href="www.facebook.com" target="_blank" class="footer-icons__icon">
+					<i class="fab fa-facebook"></i>
+				</a>
+
+			</li>
+			<li>
+				<a href="https://www.instagram.com" target="_blank" class="footer-icons__icon">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</li>
+		</ul> <!-- footer-icons -->
+
+		<p class="copyright">Copyright &copy; HeyDoc <span class="date"></span> todos os direitos reservados</p>
+	</footer>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

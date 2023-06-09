@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Doc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <img src="assets/arte-logo.jpg" alt="Hey doc" class="navbar-header__logo">
+                <button type="button" class="navbar-header__toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div> <!-- navbar-header -->
+            <ul class="navbar-icons">
+                <li>
+                    <a href="https://www.facebook.com" target="_blank" class="navbar-icons__icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank" class="navbar-icons__icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul> <!-- navbar-icons -->
+        </nav> <!-- navbar -->
+        <div class="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close"></ion-icon>
+            </span>
+
+            <div class="form-box">
+                <h2 class="form-box__title">Marcar Exames</h2>
+                <form action="#">
+                    <div class="form-box__group">
+                        <span class="form-box__icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input class="form-box__input" type="text" required>
+                        <label class="form-box__label">Nome</label>
+                    </div>
+                    <div class="form-box__group">
+                        <span class="form-box__icon">
+                            <ion-icon name="calendar"></ion-icon>
+                        </span>
+                        <input class="form-box__input" type="date" required>
+                        <label class="form-box__label">Data</label>
+                    </div>
+                    <div class="form-box__group">
+                        <span class="form-box__icon">
+                            <ion-icon name="alarm"></ion-icon>
+                        </span>
+                        <input class="form-box__input" type="time" required>
+                        <label class="form-box__label">Horário</label>
+                    </div>
+                    <div class="form-box__group">
+                        <span class="form-box__icon">
+                            <ion-icon name="document-text"></ion-icon>
+                        </span>
+                        <textarea class="form-box__input form-box__textarea" rows="5" required></textarea>
+                        <label class="form-box__label">Observações</label>
+                    </div>
+                    <button type="submit" class="form-box__button">Marcar</button>
+                </form>
+            </div>
+        </div> <!-- wrapper -->
+    </header>
+    <footer class="footer">
+        <ul class="footer-icons">
+            <li>
+                <a href="https://www.facebook.com" target="_blank" class="footer-icons__icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank" class="footer-icons__icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul> <!-- footer-icons -->
+        <p class="footer-copyright">
+            &copy; HeyDoc <span class="date"></span> todos os direitos reservados
+        </p>
+    </footer>
+</body>
+
+</html>
