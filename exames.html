@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hey Doc</title>
+    <title>Marcação de Exames - Hey Doc</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,14 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         referrerpolicy="no-referrer" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <nav class="navbar">
             <div class="navbar-header">
                 <img src="assets/arte-logo.jpg" alt="Hey doc" class="navbar-header__logo">
@@ -28,6 +25,23 @@
                     <i class="fas fa-bars"></i>
                 </button>
             </div> <!-- navbar-header -->
+            <ul class="navbar-list">
+                <li>
+                    <a href="index.html" class="navbar-list__link">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre" class="navbar-list__link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#diferenciais" class="navbar-list__link">Diferenciais</a>
+                </li>
+                <li>
+                    <a href="#services" class="navbar-list__link">Serviços</a>
+                </li>
+                <li>
+                    <a href="#Contatos" class="navbar-list__link">Contatos</a>
+                </li>
+            </ul> <!-- navbar-list -->
             <ul class="navbar-icons">
                 <li>
                     <a href="https://www.facebook.com" target="_blank" class="navbar-icons__icon">
@@ -41,51 +55,81 @@
                 </li>
             </ul> <!-- navbar-icons -->
         </nav> <!-- navbar -->
-        <div class="wrapper">
-            <span class="icon-close">
-                <ion-icon name="close"></ion-icon>
-            </span>
 
-            <div class="form-box">
-                <h2 class="form-box__title">Marcar Exames</h2>
-                <form action="#">
-                    <div class="form-box__group">
-                        <span class="form-box__icon">
-                            <ion-icon name="person"></ion-icon>
-                        </span>
-                        <input class="form-box__input" type="text" required>
-                        <label class="form-box__label">Nome</label>
-                    </div>
-                    <div class="form-box__group">
-                        <span class="form-box__icon">
-                            <ion-icon name="calendar"></ion-icon>
-                        </span>
-                        <input class="form-box__input" type="date" required>
-                        <label class="form-box__label">Data</label>
-                    </div>
-                    <div class="form-box__group">
-                        <span class="form-box__icon">
-                            <ion-icon name="alarm"></ion-icon>
-                        </span>
-                        <input class="form-box__input" type="time" required>
-                        <label class="form-box__label">Horário</label>
-                    </div>
-                    <div class="form-box__group">
-                        <span class="form-box__icon">
-                            <ion-icon name="document-text"></ion-icon>
-                        </span>
-                        <textarea class="form-box__input form-box__textarea" rows="5" required></textarea>
-                        <label class="form-box__label">Observações</label>
-                    </div>
-                    <button type="submit" class="form-box__button">Marcar</button>
-                </form>
+        <div class="hero">
+            <video src="assets/HeyDoc.mp4" autoplay muted loop class="hero__video"></video>
+            <div class="hero-text">
+                <h1 class="hero-text__titulo">Agende seus exames<br> <span class="hero-text__titulo--linha-2">com
+                        praticidade e segurança</span></h1>
+                <p class="hero-text__descricao">Realize seus exames com profissionais qualificados<br>e tenha um cuidado
+                    completo com sua saúde</p>
+                <a href="#Contatos" class="hero-text__cta">Agendar agora</a>
+            </div> <!-- hero-text -->
+        </div> <!-- hero -->
+    </header> <!-- home -->
+
+    <section id="Contatos">
+        <h2 class="section__titulo">Agende seus Exames</h2>
+        <form class="consulta-form" action="agendar_exames.php" method="POST">
+            <div class="consulta-form__group">
+                <label for="nome" class="consulta-form__label">Nome:</label>
+                <input type="text" id="nome" name="nome" class="consulta-form__input" required>
             </div>
-        </div> <!-- wrapper -->
-    </header>
+            <div class="consulta-form__group">
+                <label for="email" class="consulta-form__label">Email:</label>
+                <input type="email" id="email" name="email" class="consulta-form__input" required>
+            </div>
+            <div class="consulta-form__group">
+                <label for="telefone" class="consulta-form__label">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" class="consulta-form__input" required>
+            </div>
+            <div class="consulta-form__group">
+                <label for="tipo_exame" class="consulta-form__label">Tipo de Exame:</label>
+                <select id="tipo_exame" name="tipo_exame" class="consulta-form__select" required>
+                    <option value="">Selecione um tipo de exame</option>
+                    <option value="hemograma">Hemograma</option>
+                    <option value="urina">Exame de urina</option>
+                    <option value="ultrassonografia">Ultrassonografia</option>
+                    <option value="raiox">Raio-X</option>
+                    <!-- Adicione outros tipos de exame -->
+                </select>
+            </div>
+            <div class="consulta-form__group">
+                <label for="data" class="consulta-form__label">Data:</label>
+                <input type="date" id="data" name="data" class="consulta-form__input" required>
+            </div>
+            <div class="consulta-form__group">
+                <label for="horario" class="consulta-form__label">Horário:</label>
+                <input type="time" id="horario" name="horario" class="consulta-form__input" required>
+            </div>
+            <div class="consulta-form__group">
+                <button type="submit" class="consulta-form__button">Agendar</button>
+            </div>
+        </form>
+    </section>
+
     <footer class="footer">
+        <ul class="footer-list">
+            <li class="footer-list__item">
+                <a href="index.html" class="footer-list__link">Home</a>
+            </li>
+            <li class="footer-list__item">
+                <a href="#sobre" class="footer-list__link">Sobre Nós</a>
+            </li>
+            <li class="footer-list__item">
+                <a href="#diferenciais" class="footer-list__link">Diferenciais</a>
+            </li>
+            <li class="footer-list__item">
+                <a href="#services" class="footer-list__link">Serviços</a>
+            </li>
+            <li class="footer-list__item">
+                <a href="#Contatos" class="footer-list__link">Contatos</a>
+            </li>
+        </ul> <!-- footerlist -->
+
         <ul class="footer-icons">
             <li>
-                <a href="https://www.facebook.com" target="_blank" class="footer-icons__icon">
+                <a href="www.facebook.com" target="_blank" class="footer-icons__icon">
                     <i class="fab fa-facebook"></i>
                 </a>
             </li>
@@ -95,10 +139,10 @@
                 </a>
             </li>
         </ul> <!-- footer-icons -->
-        <p class="footer-copyright">
-            &copy; HeyDoc <span class="date"></span> todos os direitos reservados
-        </p>
+
+        <p class="footer-text">© 2023 HeyDoc. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

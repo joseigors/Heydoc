@@ -27,7 +27,7 @@
             </div> <!-- navbar-header -->
             <ul class="navbar-list">
                 <li>
-                    <a href="#home" class="navbar-list__link">Home</a>
+                    <a href="index.html" class="navbar-list__link">Home</a>
                 </li>
                 <li>
                     <a href="#sobre" class="navbar-list__link">Sobre nós</a>
@@ -93,6 +93,16 @@
                     <option value="ortopedia">Ortopedia</option>
                     <!-- Adicione outras especialidades -->
                 </select>
+
+                <div class="consulta-form__group">
+                    <label for="tipo_consulta" class="consulta-form__label">Tipo de Consulta:</label>
+                    <select id="tipo_consulta" name="tipo_consulta" class="consulta-form__select" required>
+                        <option value="">Selecione o tipo de consulta</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="online">Online</option>
+                    </select>
+                </div>
+
             </div>
             <div class="consulta-form__group">
                 <label for="data" class="consulta-form__label">Data:</label>
@@ -103,7 +113,7 @@
                 <input type="time" id="horario" name="horario" class="consulta-form__input" required>
             </div>
             <div class="consulta-form__group">
-                <button type="submit" class="consulta-form__button">Agendar</button>
+                <button class="consulta-form__button" onclick="redirect()">Agendar</button>
             </div>
         </form>
     </section>
@@ -143,6 +153,13 @@
         <p class="footer-text">© 2023 HeyDoc. Todos os direitos reservados.</p>
     </footer>
     <script src="js/scripts.js"></script>
+
+    <script>
+        function redirect() {
+            window.location.href = "consultasAgendadas.html";
+        }
+    </script>
+
 </body>
 
 </html>

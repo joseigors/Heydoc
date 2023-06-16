@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de Exames - Hey Doc</title>
+    <title>Consultas Agendadas - Hey Doc</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -59,28 +59,52 @@
         <div class="hero">
             <video src="assets/HeyDoc.mp4" autoplay muted loop class="hero__video"></video>
             <div class="hero-text">
-                <h1 class="hero-text__titulo">Resultados de Exames</h1>
-                <p class="hero-text__descricao">Veja os resultados dos seus exames</p>
+                <h1 class="hero-text__titulo">Consultas agendadas<br> <span class="hero-text__titulo--linha-2"></span>
+                </h1>
+                <p class="hero-text__descricao">Veja aqui
+                    todas
+                    as consultas marcadas com nossos especialistas<br>
+                </p>
+
             </div> <!-- hero-text -->
         </div> <!-- hero -->
     </header> <!-- home -->
 
-    <section id="exames">
-        <h2 class="section__titulo">Resultados de Exames</h2>
-        <div class="exames-list">
-            <div class="exames-list__item">
-                <h3 class="exames-list__titulo">Hemograma Completo</h3>
-                <p class="exames-list__descricao">Exame para avaliar as células do sangue</p>
-                <p class="exames-list__data">Data Prevista de Entrega: 25/06/2023</p>
-                <!-- Adicione outros detalhes do exame, como resultados, observações, etc. -->
+    <section>
+        <h2 class="section__titulo">Consultas Agendadas</h2>
+        <div class="consultas-agendadas">
+            <!-- Exemplo de consulta agendada -->
+            <div class="consulta-item">
+                <div class="consulta-item__titulo">
+                    <h3>Consulta com Dr. John Doe</h3>
+                </div>
+                <div class="consulta-item__info">
+                    <p><strong>Data:</strong> 2023-06-20</p>
+                    <p><strong>Horário:</strong> 09:00 - 10:00</p>
+                    <p><strong>Especialidade:</strong> Cardiologia</p>
+                    <p><strong>Tipo de Consulta:</strong> Presencial</p>
+                    <p><strong>Local:</strong> Clínica Médica ABC</p>
+                    <!-- Adicione mais detalhes se necessário -->
+                </div>
             </div>
-            <div class="exames-list__item">
-                <h3 class="exames-list__titulo">Colesterol Total</h3>
-                <p class="exames-list__descricao">Exame para avaliar o nível de colesterol no sangue</p>
-                <p class="exames-list__data">Data Prevista de Entrega: 28/06/2023</p>
-                <!-- Adicione outros detalhes do exame, como resultados, observações, etc. -->
+
+            <!-- Exemplo de outra consulta agendada -->
+            <div class="consulta-item">
+                <div class="consulta-item__titulo">
+                    <h3>Consulta com Dra. Jane Smith</h3>
+                </div>
+                <div class="consulta-item__info">
+                    <p><strong>Data:</strong> 2023-06-22</p>
+                    <p><strong>Horário:</strong> 14:00 - 15:00</p>
+                    <p><strong>Especialidade:</strong> Ginecologia</p>
+                    <p><strong>Tipo de Consulta:</strong> Online</p>
+                    <p><strong>Plataforma:</strong> Zoom</p>
+                    <!-- Adicione mais detalhes se necessário -->
+                </div>
             </div>
-            <!-- Adicione mais itens de exame conforme necessário -->
+
+            <!-- Adicione mais consultas agendadas aqui -->
+
         </div>
     </section>
 
@@ -118,6 +142,7 @@
 
         <p class="footer-text">© 2023 HeyDoc. Todos os direitos reservados.</p>
     </footer>
+
     <script src="js/scripts.js"></script>
 </body>
 
